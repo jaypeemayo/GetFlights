@@ -5,5 +5,4 @@ export  class Config {
   static readonly ARRIVAL_AIRPORT_CODE: string = 'ArrivalAirportCode';
   static readonly DEPARTURE_DATE: string = 'DepartureDate';
   static readonly RETURN_DATE: string = 'ReturnDate';
-
 }
