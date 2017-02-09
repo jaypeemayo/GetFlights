@@ -1,0 +1,9 @@
+<div *ngFor="let flight of  flights; let i=index">
+  <img src="{{flight.AirlineLogoAddress}}">
+  <div>{{flight.AirlineName}}</div>
+  <div>{{flight.InboundFlightsDuration}}</div>
+  <div>{{flight.ItineraryId}}</div>
+  <div>{{flight.OutboundFlightsDuration}}</div>
+  <div>{{flight.Stops}}</div>
+  <div>{{flight.TotalAmount}}</div>
+</div>
