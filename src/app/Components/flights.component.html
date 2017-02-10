@@ -1,71 +1,67 @@
-
-
-<div *ngIf="flightSearchInputErrors">
-  <div *ngIf="flightSearchInputErrors.departureAirportCodeRequired" class="alert alert-danger">Departure Airport Code is required</div>
-  <div *ngIf="flightSearchInputErrors.departureAirportCodePattern" class="alert alert-danger">Departure Airport Code must be alphanumeric characters</div>
-  <div *ngIf="flightSearchInputErrors.arrivalAirportCodeRequired" class="alert alert-danger">Arrival Airport Code is required</div>
-  <div *ngIf="flightSearchInputErrors.arrivalAirportCodePattern" class="alert alert-danger">Arrival Airport Code must be alphanumeric characters</div>
-  <div *ngIf="flightSearchInputErrors.departureDateRequired" class="alert alert-danger">Departure Date is required</div>
-  <div *ngIf="flightSearchInputErrors.returnDateRequired" class="alert alert-danger">Return Date Date is required</div>
+<div
+  *ngIf="inputForm.controls['DepartureAirportCode'].dirty && inputForm.controls['DepartureAirportCode'].hasError('required')"
+  class="alert alert-danger">Departure Airport Code is required
+</div>
+<div
+  *ngIf="inputForm.controls['DepartureAirportCode'].dirty && inputForm.controls['DepartureAirportCode'].hasError('pattern')"
+  class="alert alert-danger">Departure Airport Code must be alphanumeric characters
+</div>
+<div
+  *ngIf="inputForm.controls['ArrivalAirportCode'].dirty && inputForm.controls['ArrivalAirportCode'].hasError('required')"
+  class="alert alert-danger">Arrival Airport Code is required
+</div>
+<div
+  *ngIf="inputForm.controls['ArrivalAirportCode'].dirty && inputForm.controls['ArrivalAirportCode'].hasError('pattern')"
+  class="alert alert-danger">Arrival Airport Code must be alphanumeric characters
+</div>
+<div *ngIf="inputForm.controls['DepartureDate'].dirty && inputForm.controls['DepartureDate'].hasError('required')"
+     class="alert alert-danger">Departure Date is required
+</div>
+<div *ngIf="inputForm.controls['ReturnDate'].dirty && inputForm.controls['ReturnDate'].hasError('required')"
+     class="alert alert-danger">Return Date Date is required
 </div>
 
-<form #form ="ngForm" (ngSubmit) ="submitForm(form)" novalidate>
+<form [formGroup]="inputForm" (ngSubmit)="submitForm(inputForm)">
   <div class="form-group">
     <label for="DepartureAirportCode">Departure airport code</label>
     <div>
-      <input type="text"
+      <input id="DepartureAirportCode"
+             formControlName="DepartureAirportCode"
+             type="text"
              class="form-control"
-             [class.invalid-control] = "flightSearchInputErrors && flightSearchInputErrors.departureAirportCodeHasError"
-             id="DepartureAirportCode"
-             #DepartureAirportCode="ngModel"
-             name="DepartureAirportCode"
-             [(ngModel)]="flightSearchParams.DepartureAirportCode"
-             required maxlength="3"
-             pattern="^[a-zA-Z0-9]+$">
+             maxlength="3"/>
     </div>
   </div>
   <div class="form-group">
     <label for="ArrivalAirportCode">Arrival airport code:</label>
     <div>
-      <input type="text"
+      <input id="ArrivalAirportCode"
+             formControlName="ArrivalAirportCode"
+             type="text"
              class="form-control"
-             [class.invalid-control] = "flightSearchInputErrors && flightSearchInputErrors.arrivalAirportCodeHasError"
-             name ="ArrivalAirportCode"
-             id="ArrivalAirportCode"
-             #ArrivalAirportCode="ngModel"
-             name="ArrivalAirportCode"
-             [(ngModel)]="flightSearchParams.ArrivalAirportCode"
-             required
-             maxlength="3"
-             pattern="^[a-zA-Z0-9]+$">
+             maxlength="3">
     </div>
   </div>
   <div class="form-group">
-    <label>Departure date</label>
+    <label for="DepartureDate">Departure date</label>
     <div>
-      <my-date-picker class="form-control p-0"
-                      name="DepartureDate"
-                      [class.invalid-control] = "flightSearchInputErrors && flightSearchInputErrors.departureDateHasError"
-                      #DepartureDate="ngModel"
-                      [(ngModel)]="flightSearchParams.DepartureDate"
+      <my-date-picker id="DepartureDate"
+                      formControlName="DepartureDate"
+                      class="form-control p-0"
                       [options]="departureDatePickerOptions"
                       (dateChanged)="onDepartureDateChanged($event)"
-                      required>
-
+                      [selDate]="selectedDate">
       </my-date-picker>
     </div>
   </div>
   <div class="form-group">
-    <label>Return date</label>
+    <label for="ReturnDate">Return date</label>
     <div>
-      <my-date-picker class="form-control p-0"
-                      name="ReturnDate"
-                      [class.invalid-control] = "flightSearchInputErrors && flightSearchInputErrors.returnDateHasError"
-                      #ReturnDate="ngModel"
-                      [(ngModel)]="flightSearchParams.ReturnDate"
+      <my-date-picker id="ReturnDate"
+                      formControlName="ReturnDate"
+                      class="form-control p-0"
                       [options]="returnDatePickerOptions"
-                      (dateChanged)="onReturnDateChanged($event)"
-                      required>
+                      name="ReturnDate">
       </my-date-picker>
     </div>
   </div>

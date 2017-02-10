@@ -8,7 +8,7 @@ import {LocationStrategy, HashLocationStrategy} from "@angular/common";
 import {FlightsComponent} from "./Components/flights.component";
 import {FlightsSearchComponent} from "./Components/flights-search.component";
 import {HttpModule} from "@angular/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MyDatePickerModule} from "mydatepicker";
 import {MomentModule} from "angular2-moment";
 
@@ -19,7 +19,8 @@ import {MomentModule} from "angular2-moment";
     HttpModule,
     FormsModule,
     MyDatePickerModule,
-    MomentModule],
+    MomentModule,
+    ReactiveFormsModule], //for model driven forms
   declarations: [ AppComponent, FlightsComponent, FlightsSearchComponent],
   bootstrap:    [ AppComponent ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]//to prevent error when refreshed.

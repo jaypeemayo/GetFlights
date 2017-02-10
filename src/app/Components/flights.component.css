@@ -1,7 +1,7 @@
-.invalid-control
+/*show red border if dirty and invalid*/
+.ng-dirty:not(form).ng-invalid:not(form)
 {
   border: 5px solid #a94442;
 }
-
 
 

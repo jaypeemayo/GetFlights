@@ -1,0 +1,21 @@
+.airline-name
+{
+  font-weight: bolder;
+  font-size: smaller;
+}
+
+.duration-label
+{
+  font-size: x-small;
+}
+.duration-value
+{
+  font-weight: 100;
+  font-size: 300%;
+}
+
+.flight-price
+{
+  font-weight: bold;
+  font-size: xx-large;
+}
