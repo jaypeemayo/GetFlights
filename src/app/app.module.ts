@@ -11,6 +11,7 @@ import {HttpModule} from "@angular/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MyDatePickerModule} from "mydatepicker";
 import {MomentModule} from "angular2-moment";
+import {HoursMinutesFormatterPipe} from "./Common/hour-minutes-formatter.pipe";
 
 @NgModule({
   imports:      [ NgbModule.forRoot(),
@@ -21,7 +22,7 @@ import {MomentModule} from "angular2-moment";
     MyDatePickerModule,
     MomentModule,
     ReactiveFormsModule], //for model driven forms
-  declarations: [ AppComponent, FlightsComponent, FlightsSearchComponent],
+  declarations: [ AppComponent, FlightsComponent, FlightsSearchComponent, HoursMinutesFormatterPipe],
   bootstrap:    [ AppComponent ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]//to prevent error when refreshed.
 })

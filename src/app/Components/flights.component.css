@@ -1,7 +1,40 @@
-/*show red border if dirty and invalid*/
+
 .ng-dirty:not(form).ng-invalid:not(form)
 {
   border: 5px solid #a94442;
 }
 
+.input-form
+{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.80);
+  margin-top: 2px;
+  margin-bottom: 2px;
+  /*box-shadow:inset 20px 19px 20px 0px rgba(0, 0, 0, 0.25);*/
+  padding-bottom: 5px;
+}
 
+.submit-col
+{
+  text-align: center;
+}
+
+.get-flights-button
+{
+  background-color: black;
+  color: white;
+  border-radius: 0px;
+
+  border-color: orange;
+}
+.get-flights-button:hover
+{
+  background-color: rgba(0, 0, 0, 0.80);
+  cursor: pointer;
+}
+
+.get-name
+{
+  color: orange;
+  font-family: 'Montserrat', sans-serif;
+}

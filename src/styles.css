@@ -12,3 +12,10 @@ h1 {
 * {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
+body{
+  background-color: orange !important;
+}
+
+input{
+  color: black;
+}

@@ -1,55 +1,57 @@
 <span *ngIf="isLoading" class="loading"></span>
-<div class="row">
-  <div class="col col-xl-2">
-    <div>
-      <input type="text" [(ngModel)]="searchText" (input)="onSearchCriteriaChange()">
+<div class="row ">
+  <div class="col col-12 col-sm-5 col-md-4 col-lg-3 col-xl-2">
+    <div class="search-panel">
+      <div>
+        <input class="input-search-box" type="text" [(ngModel)]="searchText" (input)="onSearchCriteriaChange()">
+      </div>
+      <div class="search-by_label text-nowrap">
+        <label>Search by:</label>
+      </div>
+      <div class="search-by text-nowrap">
+        <input id="byAirlineName" type="checkbox" [checked] = "byAirlineName" (change)="byAirlineName = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byAirlineName">Airline Names</label>
+      </div>
+      <div class="search-by text-nowrap">
+        <input id="byInboundFlightsDuration" type="checkbox" [checked] = "byInboundFlightsDuration" (change)="byInboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byInboundFlightsDuration">Inbound Flights Duration</label>
+      </div>
+      <div class="search-by text-nowrap">
+        <input id="byOutboundFlightsDuration" type="checkbox" [checked] = "byOutboundFlightsDuration" (change)="byOutboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byOutboundFlightsDuration">Outbound Flights Duration</label>
+      </div>
+      <div class="search-by text-nowrap">
+        <input id="byTotalAmount" type="checkbox" [checked] = "byTotalAmount" (change)="byTotalAmount = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byTotalAmount">Total Amount</label>
+      </div>
     </div>
-    <div>
-      <div>{{filteredFlights && filteredFlights.length.toString()}} flights found</div>
-    </div>
-    <div>
-      <input id="byAirlineName" type="checkbox" [checked] = "byAirlineName" (change)="byAirlineName = $event.target.checked; onSearchCriteriaChange()"><label for="byAirlineName">Airline Names</label>
-    </div>
-    <div>
-      <input id="byInboundFlightsDuration" type="checkbox" [checked] = "byInboundFlightsDuration" (change)="byInboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label for="byInboundFlightsDuration">Inbound Flights Duration</label>
-    </div>
-    <div>
-      <input id="byOutboundFlightsDuration" type="checkbox" [checked] = "byOutboundFlightsDuration" (change)="byOutboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label for="byOutboundFlightsDuration">Outbound Flights Duration</label>
-    </div>
-    <div>
-      <input id="byTotalAmount" type="checkbox" [checked] = "byTotalAmount" (change)="byTotalAmount = $event.target.checked; onSearchCriteriaChange()"><label for="byTotalAmount">Total Amount</label>
-    </div>
+    <div class="col number-flights-found" (click)="number-flights-found">{{filteredFlights && filteredFlights.length.toString()}} flights found</div>
   </div>
-  <div class="col col-xl-10">
+  <div class="col col-12 col-sm-7 col-md-8 col-lg-9 col-xl-9">
 
-    <div *ngFor="let flight of  filteredFlights; let i=index" class="row">
+    <div *ngFor="let flight of  filteredFlights; let i=index" class="row flight-row">
 
-      <div class="col">
+      <div class="col col-7 col-sm-7 col-md-4 col-lg-3">
         <div class="row">
-          <div class="col"><img src="{{flight.AirlineLogoAddress}}"></div>
+          <div class="col airline-logo"><img src="{{flight.AirlineLogoAddress}}"></div>
         </div>
         <div class="row">
-          <div class="col airline-name">{{flight.AirlineName}}</div>
+          <div class="col airline-name text-nowrap">{{flight.AirlineName}}</div>
         </div>
       </div>
-
-      <div class="col">
+      <div class="col col-7 col-sm-7 col-md-4 col-lg-3">
         <div class="row">
           <div class="col duration-label text-nowrap">Inbound Flights Duration</div>
         </div>
         <div class="row">
-          <div class="col duration-value">{{flight.InboundFlightsDuration}}</div>
+          <div class="col duration-value text-nowrap">{{flight.InboundFlightsDuration | hoursMinutesFormatter:'{h}h {m}m'}}</div>
         </div>
       </div>
-      <div class="col">
+      <div class="col col-md-4 col-lg-3">
         <div class="row">
           <div class="col duration-label text-nowrap">Outbound Flights Duration</div>
         </div>
         <div class="row">
-          <div class="col duration-value">{{flight.OutboundFlightsDuration}}</div>
+          <div class="col duration-value text-nowrap">{{flight.OutboundFlightsDuration | hoursMinutesFormatter:'{h}h {m}m'}}</div>
         </div>
       </div>
-      <div class="col flight-price">US$ {{flight.TotalAmount}}</div>
+      <div class="col col-lg-3  flight-price text-nowrap">US$ {{flight.TotalAmount}}</div>
     </div>
   </div>
 </div>

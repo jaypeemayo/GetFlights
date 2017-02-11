@@ -20,53 +20,60 @@
 <div *ngIf="inputForm.controls['ReturnDate'].dirty && inputForm.controls['ReturnDate'].hasError('required')"
      class="alert alert-danger">Return Date Date is required
 </div>
-
-<form [formGroup]="inputForm" (ngSubmit)="submitForm(inputForm)">
-  <div class="form-group">
-    <label for="DepartureAirportCode">Departure airport code</label>
-    <div>
-      <input id="DepartureAirportCode"
-             formControlName="DepartureAirportCode"
-             type="text"
-             class="form-control"
-             maxlength="3"/>
+<form [formGroup]="inputForm" (ngSubmit)="submitForm(inputForm)" class="col-xl-6 offset-xl-3 input-form">
+  <div class="row">
+    <div class="form-group col">
+      <label for="DepartureAirportCode">Departure airport code</label>
+      <div>
+        <input id="DepartureAirportCode"
+               formControlName="DepartureAirportCode"
+               type="text"
+               class="form-control"
+               maxlength="3"/>
+      </div>
+    </div>
+    <div class="form-group col">
+      <label for="ArrivalAirportCode">Arrival airport code:</label>
+      <div>
+        <input id="ArrivalAirportCode"
+               formControlName="ArrivalAirportCode"
+               type="text"
+               class="form-control"
+               maxlength="3">
+      </div>
     </div>
   </div>
-  <div class="form-group">
-    <label for="ArrivalAirportCode">Arrival airport code:</label>
-    <div>
-      <input id="ArrivalAirportCode"
-             formControlName="ArrivalAirportCode"
-             type="text"
-             class="form-control"
-             maxlength="3">
+  <div class="row">
+    <div class="form-group col">
+      <label for="DepartureDate">Departure date</label>
+      <div>
+        <my-date-picker id="DepartureDate"
+                        formControlName="DepartureDate"
+                        class="form-control p-0"
+                        [options]="departureDatePickerOptions"
+                        (dateChanged)="onDepartureDateChanged($event)"
+                        [selDate]="selectedDate">
+        </my-date-picker>
+      </div>
     </div>
   </div>
-  <div class="form-group">
-    <label for="DepartureDate">Departure date</label>
-    <div>
-      <my-date-picker id="DepartureDate"
-                      formControlName="DepartureDate"
-                      class="form-control p-0"
-                      [options]="departureDatePickerOptions"
-                      (dateChanged)="onDepartureDateChanged($event)"
-                      [selDate]="selectedDate">
-      </my-date-picker>
+  <div class="row">
+    <div class="form-group col">
+      <label for="ReturnDate">Return date</label>
+      <div>
+        <my-date-picker id="ReturnDate"
+                        formControlName="ReturnDate"
+                        class="form-control p-0"
+                        [options]="returnDatePickerOptions"
+                        name="ReturnDate">
+        </my-date-picker>
+      </div>
     </div>
   </div>
-  <div class="form-group">
-    <label for="ReturnDate">Return date</label>
-    <div>
-      <my-date-picker id="ReturnDate"
-                      formControlName="ReturnDate"
-                      class="form-control p-0"
-                      [options]="returnDatePickerOptions"
-                      name="ReturnDate">
-      </my-date-picker>
+  <div class="row">
+    <div class="col submit-col">
+      <button class="btn-lg get-flights-button" type="submit"> <span class="get-name">Get</span>Flights</button>
     </div>
   </div>
-  <button class="btn btn-primary" type="submit">Submit</button>
 </form>
-
-{{diagnostic}}
 

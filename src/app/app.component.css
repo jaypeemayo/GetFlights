@@ -1,0 +1,36 @@
+.navbar
+{
+  background-color: #000000;
+  color: white;
+
+}
+
+.navbar-main
+{
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.get-text
+{
+  font-family: 'Montserrat', sans-serif;
+  color:orange;
+}
+.navbar-brand, .navbar-brand:hover, .nav-link
+{
+  color: white !important;
+}
+.navbar-brand
+{
+  cursor: pointer;
+  font-size: 300%;
+}
+
+.nav-link:hover
+{
+  color: orange !important;
+}
+
+

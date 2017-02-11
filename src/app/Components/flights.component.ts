@@ -87,10 +87,6 @@ export class FlightsComponent implements OnInit {
       }
     }
   }
-
-  get diagnostic() {
-    return JSON.stringify(this.inputForm.value);
-  }
 }
 
 

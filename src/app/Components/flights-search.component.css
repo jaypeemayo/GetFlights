@@ -1,21 +1,87 @@
 .airline-name
 {
-  font-weight: bolder;
-  font-size: smaller;
+  font-weight: 100;
 }
 
 .duration-label
 {
-  font-size: x-small;
+  font-size: 12px;
+
 }
 .duration-value
 {
   font-weight: 100;
-  font-size: 300%;
+  font-size: 250%;
 }
 
 .flight-price
 {
-  font-weight: bold;
-  font-size: xx-large;
+  font-weight:bold;
+  font-size: larger;
+  font-family: 'Montserrat', sans-serif;
+  color: orange;
+}
+
+.search-by
+{
+  font-size: small;
+}
+
+.search-by
+{
+
+}
+
+.flight-row:hover
+{
+  background-color: rgba(0, 0, 0, 0.93);
+  cursor: pointer;
+}
+.flight-row, .search-panel
+{
+  background-color: rgba(0, 0, 0, 0.80);
+  margin-top: 2px;
+  margin-bottom: 2px;
+  /*box-shadow:inset 20px 19px 20px 0px rgba(0, 0, 0, 0.25)*/
+}
+.search-panel
+{
+  padding:10px;
+  /*min-width: 185px;*/
+}
+
+.search-option-label{
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-top: -5px;
+}
+
+.number-flights-found, .input-search-box
+{
+  color: black !important;
+}
+
+.number-flights-found
+{
+  font-size: x-large;
+  font-weight: 100;
+}
+
+.input-search-box
+{
+  width: 100%;
+}
+
+* {
+  color: white;
+}
+
+.airline-logo
+{
+  padding: 0px;
+  margin: 5px;
+}
+
+label{
+  margin:0px;
 }
