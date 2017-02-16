@@ -6,22 +6,22 @@
         <input class="input-search-box" type="text" [(ngModel)]="searchText" (input)="onSearchCriteriaChange()">
       </div>
       <div class="search-by_label text-nowrap">
-        <label>Search by:</label>
+        <label i18n>Filter by:</label>
       </div>
       <div class="search-by text-nowrap">
-        <input id="byAirlineName" type="checkbox" [checked] = "byAirlineName" (change)="byAirlineName = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byAirlineName">Airline Names</label>
+        <input id="byAirlineName" type="checkbox" [checked] = "byAirlineName" (change)="byAirlineName = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byAirlineName" i18n>Airline Names</label>
       </div>
       <div class="search-by text-nowrap">
-        <input id="byInboundFlightsDuration" type="checkbox" [checked] = "byInboundFlightsDuration" (change)="byInboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byInboundFlightsDuration">Inbound Flights Duration</label>
+        <input id="byInboundFlightsDuration" type="checkbox" [checked] = "byInboundFlightsDuration" (change)="byInboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byInboundFlightsDuration" i18n>Inbound Flights Duration</label>
       </div>
       <div class="search-by text-nowrap">
-        <input id="byOutboundFlightsDuration" type="checkbox" [checked] = "byOutboundFlightsDuration" (change)="byOutboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byOutboundFlightsDuration">Outbound Flights Duration</label>
+        <input id="byOutboundFlightsDuration" type="checkbox" [checked] = "byOutboundFlightsDuration" (change)="byOutboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byOutboundFlightsDuration" i18n>Outbound Flights Duration</label>
       </div>
       <div class="search-by text-nowrap">
-        <input id="byTotalAmount" type="checkbox" [checked] = "byTotalAmount" (change)="byTotalAmount = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byTotalAmount">Total Amount</label>
+        <input id="byTotalAmount" type="checkbox" [checked] = "byTotalAmount" (change)="byTotalAmount = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byTotalAmount" i18n>Total Amount</label>
       </div>
     </div>
-    <div class="col number-flights-found" (click)="number-flights-found">{{filteredFlights && filteredFlights.length.toString()}} flights found</div>
+    <div class="col number-flights-found"><ng-container i18n>flights found: </ng-container>{{filteredFlights && filteredFlights.length.toString()}}</div>
   </div>
   <div class="col col-12 col-sm-7 col-md-8 col-lg-9 col-xl-9">
 
@@ -37,7 +37,7 @@
       </div>
       <div class="col col-7 col-sm-7 col-md-4 col-lg-3">
         <div class="row">
-          <div class="col duration-label text-nowrap">Inbound Flights Duration</div>
+          <div class="col duration-label text-nowrap" i18n>Inbound Flights Duration</div>
         </div>
         <div class="row">
           <div class="col duration-value text-nowrap">{{flight.InboundFlightsDuration | hoursMinutesFormatter:'{h}h {m}m'}}</div>
@@ -45,13 +45,14 @@
       </div>
       <div class="col col-md-4 col-lg-3">
         <div class="row">
-          <div class="col duration-label text-nowrap">Outbound Flights Duration</div>
+          <div class="col duration-label text-nowrap" i18n>Outbound Flights Duration</div>
         </div>
         <div class="row">
           <div class="col duration-value text-nowrap">{{flight.OutboundFlightsDuration | hoursMinutesFormatter:'{h}h {m}m'}}</div>
         </div>
       </div>
-      <div class="col col-lg-3  flight-price text-nowrap">US$ {{flight.TotalAmount}}</div>
+      <!--set the second parameter to false to show 'USD' instead of dollar symbol-->
+      <div class="col col-lg-3  flight-price text-nowrap">{{flight.TotalAmount | currency:"USD":true}}</div>
     </div>
   </div>
 </div>

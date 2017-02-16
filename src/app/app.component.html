@@ -5,12 +5,12 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <nav class="navbar navbar-light bg-faded">
-    <h1 class="navbar-brand mb-0" routerLink="/flights"><span class="get-text">Get</span>Flights</h1>
+    <h1 class="navbar-brand mb-0" routerLink="/flights"><span class="get-text" i18n>Get</span><ng-container i18n>Flights</ng-container></h1>
   </nav>
   <div id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item"  [routerLinkActive]="['active']">
-        <a class="nav-link justify-content-center" routerLink="/flights">Flights <span class="sr-only">(current)</span></a>
+        <a class="nav-link justify-content-center" routerLink="/flights" i18n>Flights <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
