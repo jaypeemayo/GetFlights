@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>GetFlights</title>
     <base href="" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
     <link rel="stylesheet" href="styles.css">
+
+
 
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -16,6 +19,17 @@
 
     <script src="systemjs.config.js"></script>
     <script>
+      // Get the locale id somehow
+      document.locale = 'es';
+
+      // Map to the text plugin
+      System.config({
+        map: {
+          text: 'systemjs-text-plugin.js'
+        }
+      });
+
+      // Launch the app
       System.import('main.js').catch(function(err){ console.error(err); });
     </script>
     <script src="../node_modules/tether/dist/js/tether.min.js"></script>
@@ -26,6 +40,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="loading-ovelay.css">
+
+
   </head>
 
   <body class="container-fluid">
@@ -33,4 +49,5 @@
       <div class="loading">Loading&#8230;</div>
     </my-app>
   </body>
+
 </html>
