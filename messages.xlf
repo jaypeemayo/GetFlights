@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="7d34cf7556beebbaed38969a614547343b6847d9" datatype="html">
+        <source>Filter by:</source>
+        <target/>
+        <note priority="1" from="description">Indicates that &apos;filter by&apos; can be used for the below checkboxes</note>
+        <note priority="1" from="meaning">&apos;Filter by&apos; label</note>
+      </trans-unit>
+      <trans-unit id="c31eeb83bc08e7c8d1c491f49f8087c21deeb4cf" datatype="html">
+        <source>Airline Names</source>
+        <target/>
+        <note priority="1" from="description">Checking the text box will include Airline names in the search</note>
+        <note priority="1" from="meaning">Filter by Airline Names</note>
+      </trans-unit>
+      <trans-unit id="6f392eb4890eb9de947d083ee4b65b8357155813" datatype="html">
+        <source>Inbound Flights Duration</source>
+        <target/>
+        <note priority="1" from="description">Checking the text box will include Inbound Flights Duration in the search</note>
+        <note priority="1" from="meaning">Filter by Inbound Flights Duration</note>
+      </trans-unit>
+      <trans-unit id="977f5e2ff3f442e1525e1a37de8b464387ae998a" datatype="html">
+        <source>Outbound Flights Duration</source>
+        <target/>
+        <note priority="1" from="description">Checking the text box will include Outbound Flights Duration in the search</note>
+        <note priority="1" from="meaning">Filter by Outbound Flights Duration</note>
+      </trans-unit>
+      <trans-unit id="b8c8e0c43462a7832d9be0e8427905657ea9b5e6" datatype="html">
+        <source>Total Amount</source>
+        <target/>
+        <note priority="1" from="description">Checking the text box will include Total Amount in the search</note>
+        <note priority="1" from="meaning">Filter by Total Amount</note>
+      </trans-unit>
+      <trans-unit id="f1b9c78f01b52c434cfaa40306e59c7051fef222" datatype="html">
+        <source>flights found:</source>
+        <target/>
+        <note priority="1" from="description"> this acts as label for total flights found</note>
+        <note priority="1" from="meaning">Flights found text</note>
+      </trans-unit>
+      <trans-unit id="7624f2bd7886bf0eb431838056715d1e01e9578d" datatype="html">
+        <source>
+            Inbound Flights Duration
+          </source>
+        <target/>
+        <note priority="1" from="description"> This is the label for Inbound Flights Duration in the search results.</note>
+        <note priority="1" from="meaning">Inbound Flights Duration Result Label</note>
+      </trans-unit>
+      <trans-unit id="34449dd6e6864fd2e5543a759454fb2ca79d8335" datatype="html">
+        <source>
+            Outbound Flights Duration
+          </source>
+        <target/>
+        <note priority="1" from="description"> This is the label for Outbound Flights Duration in the search results.</note>
+        <note priority="1" from="meaning">Outbound Flights Duration Result Label</note>
+      </trans-unit>
+      <trans-unit id="63d4f8a4855f6c75a353321f01e7c48c65bc383d" datatype="html">
+        <source>Departure Airport Code is required
+</source>
+        <target/>
+        <note priority="1" from="description">Label for Departure Airport Code text box</note>
+        <note priority="1" from="meaning">Departure Airport Code Label</note>
+      </trans-unit>
+      <trans-unit id="f398e0a532da1c2fd7f2e607d5b6a4700bb03b05" datatype="html">
+        <source>Departure Airport Code must be alphanumeric characters
+</source>
+        <target/>
+        <note priority="1" from="description">Label for Departure Airport Code text box</note>
+        <note priority="1" from="meaning">Departure Airport Code Label</note>
+      </trans-unit>
+      <trans-unit id="10ef98db57a515f21e45a00db618857844ea24eb" datatype="html">
+        <source>Arrival Airport Code is required
+</source>
+        <target/>
+        <note priority="1" from="description">Displayed when Arrival Code is not specified</note>
+        <note priority="1" from="meaning">Required Arrival Code Error Message</note>
+      </trans-unit>
+      <trans-unit id="6ea97d35b694d1eaeab53d6582cedb3e5756e86c" datatype="html">
+        <source>Arrival Airport Code must be alphanumeric characters
+</source>
+        <target/>
+        <note priority="1" from="description">Displayed when a non alphanumeric value is inputted</note>
+        <note priority="1" from="meaning">Not Alphanumeric Character Error</note>
+      </trans-unit>
+      <trans-unit id="79fcd01052dd6fb274c40055c969abbdc85c078f" datatype="html">
+        <source>Departure Date is required
+</source>
+        <target/>
+        <note priority="1" from="description">Displayed when Departure Date is not specified or an invalid date</note>
+        <note priority="1" from="meaning">Required Departure Date Error Message</note>
+      </trans-unit>
+      <trans-unit id="112a8ef72aa4448377dd9211f9ec572c01ac3f97" datatype="html">
+        <source>Return Date Date is required
+</source>
+        <target/>
+        <note priority="1" from="description">Displayed when Return Date is not specified or an invalid date</note>
+        <note priority="1" from="meaning">Required Return Date Error Message</note>
+      </trans-unit>
+      <trans-unit id="a58345a5e20e8c1cbe70388fdf41c9ad779e6365" datatype="html">
+        <source>Departure airport code</source>
+        <target/>
+        <note priority="1" from="description">Label for Departure airport code text box</note>
+        <note priority="1" from="meaning">Departure airport code Label</note>
+      </trans-unit>
+      <trans-unit id="a3d04d41eac5b89ba71c3de77b451f68a2362827" datatype="html">
+        <source>Arrival airport code:</source>
+        <target/>
+        <note priority="1" from="description">Label for Arrival airport code text box</note>
+        <note priority="1" from="meaning">Arrival airport code Label</note>
+      </trans-unit>
+      <trans-unit id="ecddb718bb1953ee1e8713c50125a4680fbae277" datatype="html">
+        <source>Departure date</source>
+        <target/>
+        <note priority="1" from="description">Label for Departure date picker</note>
+        <note priority="1" from="meaning">Departure date Label</note>
+      </trans-unit>
+      <trans-unit id="4ca4c14eb446da21b8e4d9ccc96ca60ebf7eaa86" datatype="html">
+        <source>Return date</source>
+        <target/>
+        <note priority="1" from="description">Label for Return date picker</note>
+        <note priority="1" from="meaning">Return date Label</note>
+      </trans-unit>
+      <trans-unit id="dca560bedf834a019409ed52810cd046c5d8e215" datatype="html">
+        <source>Get</source>
+        <target/>
+        <note priority="1" from="description">&apos;Get&apos; of GetFlight brand which is displayed as title of this application</note>
+        <note priority="1" from="meaning">&apos;Get&apos; of GetFlight Brand</note>
+      </trans-unit>
+      <trans-unit id="3e831acaf89714ae9fefb1e938b78cdf57b90be4" datatype="html">
+        <source>Flights</source>
+        <target/>
+        <note priority="1" from="description">&apos;Flight&apos; of GetFlight brand which is displayed as title of this application</note>
+        <note priority="1" from="meaning">&apos;Flight&apos; of GetFlight Brand</note>
+      </trans-unit>
+      <trans-unit id="8f910cd5b062fd38268107b2d3fdece063e98d48" datatype="html">
+        <source>Get</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="e01366c68ff5e44ad74b57ab01b757e876484372" datatype="html">
+        <source>Flights</source>
+        <target/>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="ko-kr">
+    <body>
+      <trans-unit id="7d34cf7556beebbaed38969a614547343b6847d9" datatype="html">
+        <source>Filter by:</source>
+        <target>필터링</target>
+        <note priority="1" from="meaning">Indicates that 'filter by' can be used for the below checkboxes
+---
+'Filter by' label</note>
+        
+      </trans-unit>
+      <trans-unit id="c31eeb83bc08e7c8d1c491f49f8087c21deeb4cf" datatype="html">
+        <source>Airline Names</source>
+        <target>항공사 이름</target>
+        <note priority="1" from="meaning">Checking the text box will include Airline names in the search
+---
+Filter by Airline Names</note>
+        
+      </trans-unit>
+      <trans-unit id="6f392eb4890eb9de947d083ee4b65b8357155813" datatype="html">
+        <source>Inbound Flights Duration</source>
+        <target>인바운드 항공편 기간</target>
+        <note priority="1" from="meaning">Checking the text box will include Inbound Flights Duration in the search
+---
+Filter by Inbound Flights Duration</note>
+        
+      </trans-unit>
+      <trans-unit id="977f5e2ff3f442e1525e1a37de8b464387ae998a" datatype="html">
+        <source>Outbound Flights Duration</source>
+        <target>아웃 바운드 항공편 기간</target>
+        <note priority="1" from="meaning">Checking the text box will include Outbound Flights Duration in the search
+---
+Filter by Outbound Flights Duration</note>
+        
+      </trans-unit>
+      <trans-unit id="b8c8e0c43462a7832d9be0e8427905657ea9b5e6" datatype="html">
+        <source>Total Amount</source>
+        <target>총 금액</target>
+        <note priority="1" from="meaning">Checking the text box will include Total Amount in the search
+---
+Filter by Total Amount</note>
+        
+      </trans-unit>
+      <trans-unit id="f1b9c78f01b52c434cfaa40306e59c7051fef222" datatype="html">
+        <source>flights found:</source>
+        <target>항공편을 찾을 수 :</target>
+        <note priority="1" from="meaning"> this acts as label for total flights found
+---
+Flights found text</note>
+        
+      </trans-unit>
+      <trans-unit id="7624f2bd7886bf0eb431838056715d1e01e9578d" datatype="html">
+        <source>Inbound Flights Duration</source>
+        <target>인바운드 항공편 기간</target>
+        <note priority="1" from="meaning"> This is the label for Inbound Flights Duration in the search results.
+---
+Inbound Flights Duration Result Label</note>
+        
+      </trans-unit>
+      <trans-unit id="34449dd6e6864fd2e5543a759454fb2ca79d8335" datatype="html">
+        <source>Outbound Flights Duration</source>
+        <target>아웃 바운드 항공편 기간</target>
+        <note priority="1" from="meaning"> This is the label for Outbound Flights Duration in the search results.
+---
+Outbound Flights Duration Result Label</note>
+        
+      </trans-unit>
+      <trans-unit id="63d4f8a4855f6c75a353321f01e7c48c65bc383d" datatype="html">
+        <source>Departure Airport Code is required</source>
+        <target>출발 공항 코드가 필요합니다</target>
+        <note priority="1" from="meaning">Label for Departure Airport Code text box
+---
+Departure Airport Code Label</note>
+        
+      </trans-unit>
+      <trans-unit id="f398e0a532da1c2fd7f2e607d5b6a4700bb03b05" datatype="html">
+        <source>Departure Airport Code must be alphanumeric characters</source>
+        <target>출발 공항 코드는 알파벳 문자 여야합니다</target>
+        <note priority="1" from="meaning">Label for Departure Airport Code text box
+---
+Departure Airport Code Label</note>
+        
+      </trans-unit>
+      <trans-unit id="10ef98db57a515f21e45a00db618857844ea24eb" datatype="html">
+        <source>Arrival Airport Code is required</source>
+        <target>도착 공항 코드가 필요합니다</target>
+        <note priority="1" from="meaning">Displayed when Arrival Code is not specified
+---
+Required Arrival Code Error Message</note>
+        
+      </trans-unit>
+      <trans-unit id="6ea97d35b694d1eaeab53d6582cedb3e5756e86c" datatype="html">
+        <source>Arrival Airport Code must be alphanumeric characters</source>
+        <target>도착 공항 코드는 알파벳 문자 여야합니다</target>
+        <note priority="1" from="meaning">Displayed when a non alphanumeric value is inputted
+---
+Not Alphanumeric Character Error</note>
+        
+      </trans-unit>
+      <trans-unit id="79fcd01052dd6fb274c40055c969abbdc85c078f" datatype="html">
+        <source>Departure Date is required</source>
+        <target>출발 날짜가 필요합니다</target>
+        <note priority="1" from="meaning">Displayed when Departure Date is not specified or an invalid date
+---
+Required Departure Date Error Message</note>
+        
+      </trans-unit>
+      <trans-unit id="112a8ef72aa4448377dd9211f9ec572c01ac3f97" datatype="html">
+        <source>Return Date Date is required</source>
+        <target>반환 날짜 날짜가 필요합니다</target>
+        <note priority="1" from="meaning">Displayed when Return Date is not specified or an invalid date
+---
+Required Return Date Error Message</note>
+        
+      </trans-unit>
+      <trans-unit id="a58345a5e20e8c1cbe70388fdf41c9ad779e6365" datatype="html">
+        <source>Departure airport code</source>
+        <target>출발 공항 코드</target>
+        <note priority="1" from="meaning">Label for Departure airport code text box
+---
+Departure airport code Label</note>
+        
+      </trans-unit>
+      <trans-unit id="a3d04d41eac5b89ba71c3de77b451f68a2362827" datatype="html">
+        <source>Arrival airport code:</source>
+        <target>도착 공항 코드 :</target>
+        <note priority="1" from="meaning">Label for Arrival airport code text box
+---
+Arrival airport code Label</note>
+        
+      </trans-unit>
+      <trans-unit id="ecddb718bb1953ee1e8713c50125a4680fbae277" datatype="html">
+        <source>Departure date</source>
+        <target>시작일</target>
+        <note priority="1" from="meaning">Label for Departure date picker
+---
+Departure date Label</note>
+        
+      </trans-unit>
+      <trans-unit id="4ca4c14eb446da21b8e4d9ccc96ca60ebf7eaa86" datatype="html">
+        <source>Return date</source>
+        <target>귀환</target>
+        <note priority="1" from="meaning">Label for Return date picker
+---
+Return date Label</note>
+        
+      </trans-unit>
+      <trans-unit id="dca560bedf834a019409ed52810cd046c5d8e215" datatype="html">
+        <source>Get</source>
+        <target>획득하십시오.</target>
+        <note priority="1" from="meaning">'Get' of GetFlight brand which is displayed as title of this application
+---
+'Get' of GetFlight Brand</note>
+        
+      </trans-unit>
+      <trans-unit id="3e831acaf89714ae9fefb1e938b78cdf57b90be4" datatype="html">
+        <source>Flights</source>
+        <target>비행</target>
+        <note priority="1" from="meaning">'Flight' of GetFlight brand which is displayed as title of this application
+---
+'Flight' of GetFlight Brand</note>
+        
+      </trans-unit>
+      <trans-unit id="8f910cd5b062fd38268107b2d3fdece063e98d48" datatype="html">
+        <source>Get</source>
+        <target>획득하십시오.</target>
+      </trans-unit>
+      <trans-unit id="e01366c68ff5e44ad74b57ab01b757e876484372" datatype="html">
+        <source>Flights</source>
+        <target>비행</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

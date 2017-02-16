@@ -20,6 +20,7 @@ export class FlightsSearchComponent implements OnInit {
   private byInboundFlightsDuration:boolean= true;
   private byOutboundFlightsDuration:boolean= true;
   private byTotalAmount:boolean= true;
+  private readonly hoursMinutesFormat:string = '{h}h {m}m';
 
   constructor(private route: ActivatedRoute,
               private flightsService: FlightsService) {

@@ -1,29 +1,29 @@
 <div
   *ngIf="inputForm.controls['DepartureAirportCode'].dirty && inputForm.controls['DepartureAirportCode'].hasError('required')"
-  class="alert alert-danger" i18n="Departure Airport Code Label| Label for Departure Airport Code text box">Departure Airport Code is required
+  class="alert alert-danger" i18n="Departure Airport Code Label|Label for Departure Airport Code text box">Departure Airport Code is required
 </div>
 <div
   *ngIf="inputForm.controls['DepartureAirportCode'].dirty && inputForm.controls['DepartureAirportCode'].hasError('pattern')"
-  class="alert alert-danger" i18n>Departure Airport Code must be alphanumeric characters
+  class="alert alert-danger" i18n="Departure Airport Code Label|Label for Departure Airport Code text box">Departure Airport Code must be alphanumeric characters
 </div>
 <div
   *ngIf="inputForm.controls['ArrivalAirportCode'].dirty && inputForm.controls['ArrivalAirportCode'].hasError('required')"
-  class="alert alert-danger" i18n>Arrival Airport Code is required
+  class="alert alert-danger" i18n="Required Arrival Code Error Message|Displayed when Arrival Code is not specified">Arrival Airport Code is required
 </div>
 <div
   *ngIf="inputForm.controls['ArrivalAirportCode'].dirty && inputForm.controls['ArrivalAirportCode'].hasError('pattern')"
-  class="alert alert-danger" i18n>Arrival Airport Code must be alphanumeric characters
+  class="alert alert-danger" i18n="Not Alphanumeric Character Error|Displayed when a non alphanumeric value is inputted">Arrival Airport Code must be alphanumeric characters
 </div>
 <div *ngIf="inputForm.controls['DepartureDate'].dirty && inputForm.controls['DepartureDate'].hasError('required')"
-     class="alert alert-danger" i18n>Departure Date is required
+     class="alert alert-danger" i18n="Required Departure Date Error Message|Displayed when Departure Date is not specified or an invalid date">Departure Date is required
 </div>
 <div *ngIf="inputForm.controls['ReturnDate'].dirty && inputForm.controls['ReturnDate'].hasError('required')"
-     class="alert alert-danger" i18n>Return Date Date is required
+     class="alert alert-danger" i18n="Required Return Date Error Message|Displayed when Return Date is not specified or an invalid date">Return Date Date is required
 </div>
 <form [formGroup]="inputForm" (ngSubmit)="submitForm(inputForm)" class="col-xl-6 offset-xl-3 input-form">
   <div class="row">
     <div class="form-group col">
-      <label for="DepartureAirportCode" i18n>Departure airport code</label>
+      <label for="DepartureAirportCode" i18n="Departure airport code Label|Label for Departure airport code text box">Departure airport code</label>
       <div>
         <input id="DepartureAirportCode"
                formControlName="DepartureAirportCode"
@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="form-group col">
-      <label for="ArrivalAirportCode" i18n>Arrival airport code:</label>
+      <label for="ArrivalAirportCode" i18n="Arrival airport code Label|Label for Arrival airport code text box">Arrival airport code:</label>
       <div>
         <input id="ArrivalAirportCode"
                formControlName="ArrivalAirportCode"
@@ -45,7 +45,7 @@
   </div>
   <div class="row">
     <div class="form-group col">
-      <label for="DepartureDate" i18n>Departure date</label>
+      <label for="DepartureDate" i18n="Departure date Label|Label for Departure date picker">Departure date</label>
       <div>
         <my-date-picker id="DepartureDate"
                         formControlName="DepartureDate"
@@ -59,7 +59,7 @@
   </div>
   <div class="row">
     <div class="form-group col">
-      <label for="ReturnDate" i18n>Return date</label>
+      <label for="ReturnDate" i18n="Return date Label|Label for Return date picker">Return date</label>
       <div>
         <my-date-picker id="ReturnDate"
                         formControlName="ReturnDate"
@@ -72,7 +72,7 @@
   </div>
   <div class="row">
     <div class="col submit-col">
-      <button class="btn-lg get-flights-button" type="submit"> <span class="get-name" i18n>Get</span><ng-container i18n>Flights</ng-container></button>
+      <button class="btn-lg get-flights-button" type="submit"> <span class="get-name" i18n="'Get' of GetFlight Brand|'Get' of GetFlight brand which is displayed as title of this application">Get</span><ng-container i18n="'Flight' of GetFlight Brand|'Flight' of GetFlight brand which is displayed as title of this application">Flights</ng-container></button>
     </div>
   </div>
 </form>

@@ -6,22 +6,37 @@
         <input class="input-search-box" type="text" [(ngModel)]="searchText" (input)="onSearchCriteriaChange()">
       </div>
       <div class="search-by_label text-nowrap">
-        <label i18n>Filter by:</label>
+        <label i18n="'Filter by' label|Indicates that 'filter by' can be used for the below checkboxes">Filter by:</label>
       </div>
       <div class="search-by text-nowrap">
-        <input id="byAirlineName" type="checkbox" [checked] = "byAirlineName" (change)="byAirlineName = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byAirlineName" i18n>Airline Names</label>
+        <input id="byAirlineName" type="checkbox" [checked]="byAirlineName"
+               (change)="byAirlineName = $event.target.checked; onSearchCriteriaChange()">
+        <label class="search-option-label" for="byAirlineName"
+               i18n="Filter by Airline Names|Checking the text box will include Airline names in the search">Airline Names</label>
       </div>
       <div class="search-by text-nowrap">
-        <input id="byInboundFlightsDuration" type="checkbox" [checked] = "byInboundFlightsDuration" (change)="byInboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byInboundFlightsDuration" i18n>Inbound Flights Duration</label>
+        <input id="byInboundFlightsDuration" type="checkbox" [checked]="byInboundFlightsDuration"
+               (change)="byInboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label
+        class="search-option-label" for="byInboundFlightsDuration"
+        i18n="Filter by Inbound Flights Duration|Checking the text box will include Inbound Flights Duration in the search">Inbound Flights Duration</label>
       </div>
       <div class="search-by text-nowrap">
-        <input id="byOutboundFlightsDuration" type="checkbox" [checked] = "byOutboundFlightsDuration" (change)="byOutboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byOutboundFlightsDuration" i18n>Outbound Flights Duration</label>
+        <input id="byOutboundFlightsDuration" type="checkbox" [checked]="byOutboundFlightsDuration"
+               (change)="byOutboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label
+        class="search-option-label" for="byOutboundFlightsDuration"
+        i18n="Filter by Outbound Flights Duration|Checking the text box will include Outbound Flights Duration in the search">Outbound Flights Duration</label>
       </div>
       <div class="search-by text-nowrap">
-        <input id="byTotalAmount" type="checkbox" [checked] = "byTotalAmount" (change)="byTotalAmount = $event.target.checked; onSearchCriteriaChange()"><label class="search-option-label" for="byTotalAmount" i18n>Total Amount</label>
+        <input id="byTotalAmount" type="checkbox" [checked]="byTotalAmount"
+               (change)="byTotalAmount = $event.target.checked; onSearchCriteriaChange()"><label
+        class="search-option-label" for="byTotalAmount"
+        i18n="Filter by Total Amount|Checking the text box will include Total Amount in the search">Total Amount</label>
       </div>
     </div>
-    <div class="col number-flights-found"><ng-container i18n>flights found: </ng-container>{{filteredFlights && filteredFlights.length.toString()}}</div>
+    <div class="col number-flights-found">
+      <ng-container i18n="Flights found text| this acts as label for total flights found">flights found:</ng-container>
+      {{filteredFlights && filteredFlights.length.toString()}}
+    </div>
   </div>
   <div class="col col-12 col-sm-7 col-md-8 col-lg-9 col-xl-9">
 
@@ -37,18 +52,28 @@
       </div>
       <div class="col col-7 col-sm-7 col-md-4 col-lg-3">
         <div class="row">
-          <div class="col duration-label text-nowrap" i18n>Inbound Flights Duration</div>
+          <div class="col duration-label text-nowrap"
+               i18n="Inbound Flights Duration Result Label| This is the label for Inbound Flights Duration in the search results.">
+            Inbound Flights Duration
+          </div>
         </div>
         <div class="row">
-          <div class="col duration-value text-nowrap">{{flight.InboundFlightsDuration | hoursMinutesFormatter:'{h}h {m}m'}}</div>
+          <div class="col duration-value text-nowrap">{{flight.InboundFlightsDuration |
+            hoursMinutesFormatter:hoursMinutesFormat}}
+          </div>
         </div>
       </div>
       <div class="col col-md-4 col-lg-3">
         <div class="row">
-          <div class="col duration-label text-nowrap" i18n>Outbound Flights Duration</div>
+          <div class="col duration-label text-nowrap"
+               i18n="Outbound Flights Duration Result Label| This is the label for Outbound Flights Duration in the search results.">
+            Outbound Flights Duration
+          </div>
         </div>
         <div class="row">
-          <div class="col duration-value text-nowrap">{{flight.OutboundFlightsDuration | hoursMinutesFormatter:'{h}h {m}m'}}</div>
+          <div class="col duration-value text-nowrap">{{flight.OutboundFlightsDuration |
+            hoursMinutesFormatter:hoursMinutesFormat}}
+          </div>
         </div>
       </div>
       <!--set the second parameter to false to show 'USD' instead of dollar symbol-->
