@@ -19,9 +19,16 @@
 
     <script src="systemjs.config.js"></script>
     <script>
-      // Get the locale id somehow
-      document.locale = 'ja';
+
+      var userLang = navigator.language || navigator.userLanguage;
+      if(userLang) {
+        document.locale = userLang;
+      }
+
+      //commented lines below used for testing only.
+      //document.locale = 'ja';
       //document.locale = 'ko';
+      //document.locale = 'ru';
 
       // Map to the text plugin
       System.config({
@@ -41,8 +48,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="loading-ovelay.css">
-
-
   </head>
 
   <body class="container-fluid">
@@ -50,5 +55,4 @@
       <div class="loading">Loading&#8230;</div>
     </my-app>
   </body>
-
 </html>
