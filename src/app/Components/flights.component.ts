@@ -48,8 +48,8 @@ export class FlightsComponent implements OnInit {
       this.router.navigate([this.flightSearchComponentRoute,
         flightSearchParams.DepartureAirportCode,
         flightSearchParams.ArrivalAirportCode,
-        moment(flightSearchParams.DepartureDate.jsdate).format(),
-        moment(flightSearchParams.ReturnDate.jsdate).format()]);
+        moment(flightSearchParams.DepartureDate.date).format(),
+        moment(flightSearchParams.ReturnDate.date).format()]);
     }
   }
 
