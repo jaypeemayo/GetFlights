@@ -18,7 +18,7 @@ export class FlightsService
              returnDate:string) {
 
     let urlSearchParams:URLSearchParams = new URLSearchParams();
-    urlSearchParams.set(Config.DEPARTURE_AIRPORT_CODE, arrivalAirportCode);
+    urlSearchParams.set(Config.DEPARTURE_AIRPORT_CODE, departureAirportCode);
     urlSearchParams.set(Config.ARRIVAL_AIRPORT_CODE, arrivalAirportCode);
     urlSearchParams.set(Config.DEPARTURE_DATE, departureDate);
     urlSearchParams.set(Config.RETURN_DATE, returnDate);
@@ -27,7 +27,5 @@ export class FlightsService
       response => {
         return response.json() as Flights[];
       });
-
   }
-
 }

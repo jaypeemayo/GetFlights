@@ -10,7 +10,6 @@ import {FlightsSearchComponent} from "./Components/flights-search.component";
 import {HttpModule} from "@angular/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MyDatePickerModule} from "mydatepicker";
-import {MomentModule} from "angular2-moment";
 import {HoursMinutesFormatterPipe} from "./Common/hour-minutes-formatter.pipe";
 
 @NgModule({
@@ -20,7 +19,6 @@ import {HoursMinutesFormatterPipe} from "./Common/hour-minutes-formatter.pipe";
     HttpModule,
     FormsModule,
     MyDatePickerModule,
-    MomentModule,
     ReactiveFormsModule], //for model driven forms
   declarations: [ AppComponent, FlightsComponent, FlightsSearchComponent, HoursMinutesFormatterPipe],
   bootstrap:    [ AppComponent ],

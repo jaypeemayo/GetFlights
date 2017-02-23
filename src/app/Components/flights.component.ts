@@ -1,12 +1,11 @@
 import {Component, OnInit} from "@angular/core";
 import {FlightSearchParams} from "../Models/FlightSearchParams";
-import {NgForm, FormGroup, FormBuilder, Validators} from "@angular/forms";
+import {FormGroup, FormBuilder, Validators} from "@angular/forms";
 import {IMyOptions, IMyDateModel} from "mydatepicker";
-import moment = require("moment");
 import {Router} from "@angular/router";
-import Moment = moment.Moment;
 import {FlightDate} from "../Models/FlightDate";
 import {Config} from "../Common/Config";
+import * as moment from 'moment';
 
 @Component({
   moduleId: module.id,
@@ -19,7 +18,7 @@ export class FlightsComponent implements OnInit {
   private readonly dateFormat: string = 'dd/mm/yyyy';
   private readonly airportCodePattern: string = '^[a-zA-Z0-9]+$';
   private readonly flightSearchComponentRoute: string = '/flights-search'
-  private inputForm: FormGroup;
+  inputForm: FormGroup;
 
   constructor(private router: Router,
               private formBuilder: FormBuilder) {
@@ -31,8 +30,8 @@ export class FlightsComponent implements OnInit {
     let tomorrow: FlightDate = new FlightDate(moment().add(1, 'day'));
 
     this.inputForm = this.formBuilder.group({
-      DepartureAirportCode: ['', [Validators.required, Validators.pattern(this.airportCodePattern)]],
-      ArrivalAirportCode: ['', [Validators.required, Validators.pattern(this.airportCodePattern)]],
+      DepartureAirportCode: ['', [Validators.required, Validators.pattern(this.airportCodePattern), Validators.minLength(3)]],
+      ArrivalAirportCode: ['', [Validators.required, Validators.pattern(this.airportCodePattern), Validators.minLength(3)]],
       DepartureDate: [{date: today}, Validators.required],
       ReturnDate: [{date: tomorrow}, Validators.required]
     });
@@ -41,11 +40,11 @@ export class FlightsComponent implements OnInit {
     this.returnDatePickerOptions = this.disableUntil(yesterday, this.returnDatePickerOptions);
   }
 
-  submitForm(inputForm: NgForm): void {
-    this.markAllDiry(inputForm); //mark all inputs dirty to show error
+  submitForm(): void {
+    this.markAllDiry(this.inputForm); //mark all inputs dirty to show error
 
-    if (inputForm && inputForm.valid) {
-      let flightSearchParams:FlightSearchParams = inputForm.value;
+    if (this.inputForm && this.inputForm.valid) {
+      let flightSearchParams:FlightSearchParams = this.inputForm.value;
       this.router.navigate([this.flightSearchComponentRoute,
         flightSearchParams.DepartureAirportCode,
         flightSearchParams.ArrivalAirportCode,
@@ -62,12 +61,12 @@ export class FlightsComponent implements OnInit {
     }
   }
 
-  private departureDatePickerOptions: IMyOptions = {
+  departureDatePickerOptions: IMyOptions = {
     dateFormat: this.dateFormat,
     indicateInvalidDate: false
   };
 
-  private returnDatePickerOptions: IMyOptions = {
+  returnDatePickerOptions: IMyOptions = {
     dateFormat: this.dateFormat,
     indicateInvalidDate: false
   };
@@ -78,7 +77,7 @@ export class FlightsComponent implements OnInit {
     return copy;
   }
 
-  private markAllDiry(inputForm: NgForm) {
+  private markAllDiry(inputForm: FormGroup) {
     if (inputForm) {
       for (var key in inputForm.controls) {
         if (inputForm.controls.hasOwnProperty(key)) {

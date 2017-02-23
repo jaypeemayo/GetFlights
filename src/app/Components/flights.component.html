@@ -1,10 +1,14 @@
 <div
   *ngIf="inputForm.controls['DepartureAirportCode'].dirty && inputForm.controls['DepartureAirportCode'].hasError('required')"
-  class="alert alert-danger" i18n="Departure Airport Code Label|Label for Departure Airport Code text box">Departure Airport Code is required
+  class="alert alert-danger" i18n="Required Departure Airport Code error message|Displayed when Departure Airport Code is not specified">Departure Airport Code is required
 </div>
 <div
   *ngIf="inputForm.controls['DepartureAirportCode'].dirty && inputForm.controls['DepartureAirportCode'].hasError('pattern')"
-  class="alert alert-danger" i18n="Departure Airport Code Label|Label for Departure Airport Code text box">Departure Airport Code must be alphanumeric characters
+  class="alert alert-danger" i18n="Not Alphanumeric Character Error|Displayed when a non alphanumeric value is inputted to Departure Airport Code">Departure Airport Code must be alphanumeric characters
+</div>
+<div
+  *ngIf="inputForm.controls['DepartureAirportCode'].dirty && inputForm.controls['DepartureAirportCode'].hasError('minlength')"
+  class="alert alert-danger" i18n="Minimum length Arrival Code Error Message|Displayed when Arrival Code less than 3 characters long.">Departure Airport Code must be 3 characters
 </div>
 <div
   *ngIf="inputForm.controls['ArrivalAirportCode'].dirty && inputForm.controls['ArrivalAirportCode'].hasError('required')"
@@ -12,7 +16,11 @@
 </div>
 <div
   *ngIf="inputForm.controls['ArrivalAirportCode'].dirty && inputForm.controls['ArrivalAirportCode'].hasError('pattern')"
-  class="alert alert-danger" i18n="Not Alphanumeric Character Error|Displayed when a non alphanumeric value is inputted">Arrival Airport Code must be alphanumeric characters
+  class="alert alert-danger" i18n="Not Alphanumeric Character Error|Displayed when a non alphanumeric value is inputted to Arrival Airport Code">Arrival Airport Code must be alphanumeric characters
+</div>
+<div
+  *ngIf="inputForm.controls['ArrivalAirportCode'].dirty && inputForm.controls['ArrivalAirportCode'].hasError('minlength')"
+  class="alert alert-danger" i18n="Minimum length Arrival Code Error Message|Displayed when Arrival Code less than 3 characters long.">Arrival Airport Code must be 3 characters
 </div>
 <div *ngIf="inputForm.controls['DepartureDate'].dirty && inputForm.controls['DepartureDate'].hasError('required')"
      class="alert alert-danger" i18n="Required Departure Date Error Message|Displayed when Departure Date is not specified or an invalid date">Departure Date is required
@@ -20,7 +28,7 @@
 <div *ngIf="inputForm.controls['ReturnDate'].dirty && inputForm.controls['ReturnDate'].hasError('required')"
      class="alert alert-danger" i18n="Required Return Date Error Message|Displayed when Return Date is not specified or an invalid date">Return Date Date is required
 </div>
-<form [formGroup]="inputForm" (ngSubmit)="submitForm(inputForm)" class="col-xl-6 offset-xl-3 input-form">
+<form [formGroup]="inputForm" (ngSubmit)="submitForm()" class="col-xl-6 offset-xl-3 input-form">
   <div class="row">
     <div class="form-group col">
       <label for="DepartureAirportCode" i18n="Departure airport code Label|Label for Departure airport code text box">Departure airport code</label>

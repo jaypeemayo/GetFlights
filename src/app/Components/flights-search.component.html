@@ -14,7 +14,7 @@
         <label class="search-option-label" for="byAirlineName"
                i18n="Filter by Airline Names|Checking the text box will include Airline names in the search">Airline Names</label>
       </div>
-      <div class="search-by-nowrap">
+      <div class="search-by">
         <input id="byInboundFlightsDuration" type="checkbox" [checked]="byInboundFlightsDuration"
                (change)="byInboundFlightsDuration = $event.target.checked; onSearchCriteriaChange()"><label
         class="search-option-label" for="byInboundFlightsDuration"

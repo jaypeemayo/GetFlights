@@ -6,7 +6,6 @@
 .duration-label
 {
   font-size: 12px;
-
 }
 .duration-value
 {
@@ -27,11 +26,6 @@
   font-size: small;
 }
 
-.search-by
-{
-
-}
-
 .flight-row:hover
 {
   background-color: rgba(0, 0, 0, 0.93);
@@ -42,12 +36,10 @@
   background-color: rgba(0, 0, 0, 0.80);
   margin-top: 2px;
   margin-bottom: 2px;
-  /*box-shadow:inset 20px 19px 20px 0px rgba(0, 0, 0, 0.25)*/
 }
 .search-panel
 {
   padding:10px;
-  /*min-width: 185px;*/
 }
 
 .search-option-label{

@@ -12,14 +12,14 @@ import {Config} from "../Common/Config";
   providers:[FlightsService, HttpClient]
 })
 export class FlightsSearchComponent implements OnInit {
-  private flights: Flights[];
-  private filteredFlights: Flights[];
-  private searchText:string;
-  private isLoading:boolean =false;
-  private byAirlineName:boolean = true;
-  private byInboundFlightsDuration:boolean= true;
-  private byOutboundFlightsDuration:boolean= true;
-  private byTotalAmount:boolean= true;
+  flights: Flights[];
+  filteredFlights: Flights[];
+  searchText:string;
+  isLoading:boolean =false;
+  byAirlineName:boolean = true;
+  byInboundFlightsDuration:boolean= true;
+  byOutboundFlightsDuration:boolean= true;
+  byTotalAmount:boolean= true;
   private readonly hoursMinutesFormat:string = '{h}h {m}m';
 
   constructor(private route: ActivatedRoute,
